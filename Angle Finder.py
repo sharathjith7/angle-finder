@@ -83,6 +83,8 @@ class Main:
         self.screen.fill(BLACK)
         if self.clipboard_data is not None and self.clipboard_image is not None:
             self.screen.blit(self.clipboard_image, (0, 0))
+        else:
+            self.draw_text('Press v to paste', self.screen, (205, HEIGHT / 2 - 27), 27, GREY, 'times new roman')
         if self.mouse_clicked:
             if len(self.dot_positions) == 1:
                 pygame.draw.circle(self.screen, YELLOW, self.dot_positions[0], 3)
@@ -114,6 +116,14 @@ class Main:
         angle = math.degrees(angle)
 
         return angle
+
+####################### REAL CODE ###########################
+
+    def draw_text(self, words, screen, pos, size, colour, font_name):
+        font = pygame.font.SysFont(font_name, size)
+        text = font.render(words, 0, colour)
+        text_size = text.get_size()
+        screen.blit(text, pos)
 
 
 ####################### REAL CODE ###########################
