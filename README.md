@@ -20,5 +20,5 @@ This program works in collaboration with snipping tool available in windows or a
   
 6. The angle formed between the two lines will be displayed repeatedly in the python console.
 
-## Usecase
+## Use Case
 As the exams are being conducted online, to measure and validate the angles drawn in the geometry/drawing exams, this software turns out to be quite useful.
